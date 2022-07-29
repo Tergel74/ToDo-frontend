@@ -10,9 +10,17 @@ export default function Home() {
   const [texts, setTexts] = useState([])
   
   var checked = false
+  // function loadData(){
+
+  // }
+  // make a function that loads all todos in dabase after refresh or after starting the project
+
+  // give id from backend to avoid deleting all todos with the same todo tasks when deleting one in frontend
+  // objects in array
 
   function addText() {
     setTexts([...texts, text])
+
     axios
       .post('http://localhost:3001/create', {
         todo: text
